@@ -1,0 +1,701 @@
+<html><head></head><body><div class="apidocDiv">
+<style>
+/*csslint
+*/
+.apidocDiv {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.apidocDiv a[href] {
+    color: #33f;
+    font-weight: bold;
+    text-decoration: none;
+}
+.apidocDiv a[href]:hover {
+    text-decoration: underline;
+}
+.apidocCodeCommentSpan {
+    background: #bbf;
+    color: #000;
+    display: block;
+}
+.apidocCodeKeywordSpan {
+    color: #d00;
+    font-weight: bold;
+}
+.apidocCodePre {
+    background: #eef;
+    border: 1px solid;
+    color: #777;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+.apidocFooterDiv {
+    margin-top: 20px;
+    text-align: center;
+}
+.apidocModuleLi {
+    margin-top: 10px;
+}
+.apidocSectionDiv {
+    border-top: 1px solid;
+    margin-top: 20px;
+}
+.apidocSignatureSpan {
+    color: #777;
+    font-weight: bold;
+}
+</style>
+<h1>api documentation for
+    <a href="https://github.com/izaakschroeder/express-authentication">express-authentication (v0.3.2)</a>
+</h1>
+<h4>Unopinionated authentication middleware for express.</h4>
+<div class="apidocSectionDiv"><a href="#apidoc.tableOfContents" id="apidoc.tableOfContents"><h1>table of contents</h1></a><ol>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.express-authentication">module express-authentication</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.express-authentication.express-authentication">
+            function <span class="apidocSignatureSpan"></span>express-authentication
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.express-authentication.failed">
+            function <span class="apidocSignatureSpan">express-authentication.</span>failed
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.express-authentication.of">
+            function <span class="apidocSignatureSpan">express-authentication.</span>of
+            <span class="apidocSignatureSpan">(req)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.express-authentication.required">
+            function <span class="apidocSignatureSpan">express-authentication.</span>required
+            <span class="apidocSignatureSpan">(error)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.express-authentication.succeeded">
+            function <span class="apidocSignatureSpan">express-authentication.</span>succeeded
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.express-authentication.toString">
+            function <span class="apidocSignatureSpan">express-authentication.</span>toString
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.express-authentication.tried">
+            function <span class="apidocSignatureSpan">express-authentication.</span>tried
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.express-authentication.untried">
+            function <span class="apidocSignatureSpan">express-authentication.</span>untried
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.express-authentication.failed">module express-authentication.failed</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.express-authentication.failed.failed">
+            function <span class="apidocSignatureSpan">express-authentication.</span>failed
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.express-authentication.of">module express-authentication.of</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.express-authentication.of.of">
+            function <span class="apidocSignatureSpan">express-authentication.</span>of
+            <span class="apidocSignatureSpan">(req)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.express-authentication.required">module express-authentication.required</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.express-authentication.required.required">
+            function <span class="apidocSignatureSpan">express-authentication.</span>required
+            <span class="apidocSignatureSpan">(error)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.express-authentication.succeeded">module express-authentication.succeeded</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.express-authentication.succeeded.succeeded">
+            function <span class="apidocSignatureSpan">express-authentication.</span>succeeded
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.express-authentication.toString">module express-authentication.toString</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.express-authentication.toString.toString">
+            function <span class="apidocSignatureSpan">express-authentication.</span>toString
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.express-authentication.tried">module express-authentication.tried</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.express-authentication.tried.tried">
+            function <span class="apidocSignatureSpan">express-authentication.</span>tried
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.express-authentication.untried">module express-authentication.untried</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.express-authentication.untried.untried">
+            function <span class="apidocSignatureSpan">express-authentication.</span>untried
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+</ol></div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.express-authentication" id="apidoc.module.express-authentication">module express-authentication</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.express-authentication.express-authentication" id="apidoc.element.express-authentication.express-authentication">
+        function <span class="apidocSignatureSpan"></span>express-authentication
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function authentication(options) {
+	options = _.assign({ }, options, {
+		context: '__authentication'
+	});
+
+	var context = contextualize({
+		context: options.context,
+		properties: [ 'authentication', 'authenticated', 'challenge' ]
+	});
+
+	var wrapped = _.mapValues(mixins, function wrap(mixin) {
+		return function wrapper() {
+			return this.use(mixin.apply(this, arguments));
+		};
+	});
+
+	return context.mixin(wrapped);
+
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.express-authentication.failed" id="apidoc.element.express-authentication.failed">
+        function <span class="apidocSignatureSpan">express-authentication.</span>failed
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function failed() {
+	return function check(req, res, next) {
+		next(!req.authenticated ? null : 'route');
+	};
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+// Allow anything to authenticate against this route
+app.get('/any', auth.required());
+
+// Invoke specific middleware when authentication either succeeds or fails
+// which is much more powerful than passports `redirect` ability.
+app.get('/handlers', api.succeeded(), redirect());
+app.get('/handlers', session.succeeded(), redirect());
+app.get('/handlers', auth.<span class="apidocCodeKeywordSpan">failed</span>(), redirect());
+
+// Get authentication data from middleware itself
+app.get('/any', function(req, res) {
+
+	// Get anything that was set
+	var result = api.of(req);
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.express-authentication.of" id="apidoc.element.express-authentication.of">
+        function <span class="apidocSignatureSpan">express-authentication.</span>of
+        <span class="apidocSignatureSpan">(req)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function pick(req) {
+		return _.pick(req, 'authentication', 'authenticated', 'challenge');
+	}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+app.get('/handlers', session.succeeded(), redirect());
+app.get('/handlers', auth.failed(), redirect());
+
+// Get authentication data from middleware itself
+app.get('/any', function(req, res) {
+
+	// Get anything that was set
+	var result = api.<span class="apidocCodeKeywordSpan">of</span>(req);
+
+	if (result.authenticated) {
+		// Use auth.data
+	}
+});
+
+```
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.express-authentication.required" id="apidoc.element.express-authentication.required">
+        function <span class="apidocSignatureSpan">express-authentication.</span>required
+        <span class="apidocSignatureSpan">(error)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function required(error) {
+	if (!(error)) {
+		error = {
+			status: 401,
+			statusCode: 401,
+			error: 'AUTHENTICATION_REQUIRED'
+		};
+	}
+	if (_.isFunction(error)) {
+		return function check(req, res, next) {
+			if (req.authenticated) {
+				next(null);
+			} else {
+				next(error(req, res));
+			}
+		};
+	} else if (_.isObject(error)) {
+		return function check(req, res, next) {
+			if (req.authenticated) {
+				next(null);
+			} else {
+				next(error);
+			}
+		};
+	} else {
+		throw new TypeError();
+	}
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+		req.authentication = { error: 'INVALID_API_KEY' };
+	}
+
+	// That's it! You're done!
+	next();
+});
+
+app.get('/secret', authentication.<span class="apidocCodeKeywordSpan">required</span>(), function(req, res) {
+	res.status(200).send('Hello!');
+});
+```
+
+If you want to use more than one authentication middleware then use the magic of contextualization.
+
+```javascript
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.express-authentication.succeeded" id="apidoc.element.express-authentication.succeeded">
+        function <span class="apidocSignatureSpan">express-authentication.</span>succeeded
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function succeeded() {
+	return function check(req, res, next) {
+		next(req.authenticated ? null : 'route');
+	};
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+app.get('/session', session.required());
+
+// Allow anything to authenticate against this route
+app.get('/any', auth.required());
+
+// Invoke specific middleware when authentication either succeeds or fails
+// which is much more powerful than passports `redirect` ability.
+app.get('/handlers', api.<span class="apidocCodeKeywordSpan">succeeded</span>(), redirect());
+app.get('/handlers', session.succeeded(), redirect());
+app.get('/handlers', auth.failed(), redirect());
+
+// Get authentication data from middleware itself
+app.get('/any', function(req, res) {
+
+	// Get anything that was set
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.express-authentication.toString" id="apidoc.element.express-authentication.toString">
+        function <span class="apidocSignatureSpan">express-authentication.</span>toString
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">toString = function () {
+    return text;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.express-authentication.tried" id="apidoc.element.express-authentication.tried">
+        function <span class="apidocSignatureSpan">express-authentication.</span>tried
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function tried() {
+	return function check(req, res, next) {
+		next(req.challenge ? null : 'route');
+	};
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.express-authentication.untried" id="apidoc.element.express-authentication.untried">
+        function <span class="apidocSignatureSpan">express-authentication.</span>untried
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function untried() {
+	return function check(req, res, next) {
+		next(!req.challenge ? null : 'route');
+	};
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.express-authentication.failed" id="apidoc.module.express-authentication.failed">module express-authentication.failed</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.express-authentication.failed.failed" id="apidoc.element.express-authentication.failed.failed">
+        function <span class="apidocSignatureSpan">express-authentication.</span>failed
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function failed() {
+	return function check(req, res, next) {
+		next(!req.authenticated ? null : 'route');
+	};
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+// Allow anything to authenticate against this route
+app.get('/any', auth.required());
+
+// Invoke specific middleware when authentication either succeeds or fails
+// which is much more powerful than passports `redirect` ability.
+app.get('/handlers', api.succeeded(), redirect());
+app.get('/handlers', session.succeeded(), redirect());
+app.get('/handlers', auth.<span class="apidocCodeKeywordSpan">failed</span>(), redirect());
+
+// Get authentication data from middleware itself
+app.get('/any', function(req, res) {
+
+	// Get anything that was set
+	var result = api.of(req);
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.express-authentication.of" id="apidoc.module.express-authentication.of">module express-authentication.of</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.express-authentication.of.of" id="apidoc.element.express-authentication.of.of">
+        function <span class="apidocSignatureSpan">express-authentication.</span>of
+        <span class="apidocSignatureSpan">(req)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function pick(req) {
+		return _.pick(req, 'authentication', 'authenticated', 'challenge');
+	}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+app.get('/handlers', session.succeeded(), redirect());
+app.get('/handlers', auth.failed(), redirect());
+
+// Get authentication data from middleware itself
+app.get('/any', function(req, res) {
+
+	// Get anything that was set
+	var result = api.<span class="apidocCodeKeywordSpan">of</span>(req);
+
+	if (result.authenticated) {
+		// Use auth.data
+	}
+});
+
+```
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.express-authentication.required" id="apidoc.module.express-authentication.required">module express-authentication.required</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.express-authentication.required.required" id="apidoc.element.express-authentication.required.required">
+        function <span class="apidocSignatureSpan">express-authentication.</span>required
+        <span class="apidocSignatureSpan">(error)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function required(error) {
+	if (!(error)) {
+		error = {
+			status: 401,
+			statusCode: 401,
+			error: 'AUTHENTICATION_REQUIRED'
+		};
+	}
+	if (_.isFunction(error)) {
+		return function check(req, res, next) {
+			if (req.authenticated) {
+				next(null);
+			} else {
+				next(error(req, res));
+			}
+		};
+	} else if (_.isObject(error)) {
+		return function check(req, res, next) {
+			if (req.authenticated) {
+				next(null);
+			} else {
+				next(error);
+			}
+		};
+	} else {
+		throw new TypeError();
+	}
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+		req.authentication = { error: 'INVALID_API_KEY' };
+	}
+
+	// That's it! You're done!
+	next();
+});
+
+app.get('/secret', authentication.<span class="apidocCodeKeywordSpan">required</span>(), function(req, res) {
+	res.status(200).send('Hello!');
+});
+```
+
+If you want to use more than one authentication middleware then use the magic of contextualization.
+
+```javascript
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.express-authentication.succeeded" id="apidoc.module.express-authentication.succeeded">module express-authentication.succeeded</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.express-authentication.succeeded.succeeded" id="apidoc.element.express-authentication.succeeded.succeeded">
+        function <span class="apidocSignatureSpan">express-authentication.</span>succeeded
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function succeeded() {
+	return function check(req, res, next) {
+		next(req.authenticated ? null : 'route');
+	};
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+app.get('/session', session.required());
+
+// Allow anything to authenticate against this route
+app.get('/any', auth.required());
+
+// Invoke specific middleware when authentication either succeeds or fails
+// which is much more powerful than passports `redirect` ability.
+app.get('/handlers', api.<span class="apidocCodeKeywordSpan">succeeded</span>(), redirect());
+app.get('/handlers', session.succeeded(), redirect());
+app.get('/handlers', auth.failed(), redirect());
+
+// Get authentication data from middleware itself
+app.get('/any', function(req, res) {
+
+	// Get anything that was set
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.express-authentication.toString" id="apidoc.module.express-authentication.toString">module express-authentication.toString</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.express-authentication.toString.toString" id="apidoc.element.express-authentication.toString.toString">
+        function <span class="apidocSignatureSpan">express-authentication.</span>toString
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function toString() { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.express-authentication.tried" id="apidoc.module.express-authentication.tried">module express-authentication.tried</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.express-authentication.tried.tried" id="apidoc.element.express-authentication.tried.tried">
+        function <span class="apidocSignatureSpan">express-authentication.</span>tried
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function tried() {
+	return function check(req, res, next) {
+		next(req.challenge ? null : 'route');
+	};
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.express-authentication.untried" id="apidoc.module.express-authentication.untried">module express-authentication.untried</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.express-authentication.untried.untried" id="apidoc.element.express-authentication.untried.untried">
+        function <span class="apidocSignatureSpan">express-authentication.</span>untried
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function untried() {
+	return function check(req, res, next) {
+		next(!req.challenge ? null : 'route');
+	};
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocFooterDiv">
+    [ this document was created with
+    <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a>
+    ]
+</div>
+</div>
+</body></html>
