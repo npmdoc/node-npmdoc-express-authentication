@@ -1,6 +1,6 @@
 # npmdoc-express-authentication
 
-#### api documentation for  [express-authentication (v0.3.2)](https://github.com/izaakschroeder/express-authentication)  [![npm package](https://img.shields.io/npm/v/npmdoc-express-authentication.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-express-authentication) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-express-authentication.svg)](https://travis-ci.org/npmdoc/node-npmdoc-express-authentication)
+#### basic api documentation for  [express-authentication (v0.3.2)](https://github.com/izaakschroeder/express-authentication)  [![npm package](https://img.shields.io/npm/v/npmdoc-express-authentication.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-express-authentication) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-express-authentication.svg)](https://travis-ci.org/npmdoc/node-npmdoc-express-authentication)
 
 #### Unopinionated authentication middleware for express.
 
@@ -78,7 +78,8 @@
         "spec": "NODE_PATH=lib NODE_ENV=test istanbul cover node_modules/.bin/_mocha -- --sort --recursive -r test/helpers/chai -r test/helpers/sinon -R spec test/spec",
         "test": "npm run lint && npm run spec && npm run coverage"
     },
-    "version": "0.3.2"
+    "version": "0.3.2",
+    "bin": {}
 }
 ```
 
